@@ -1,0 +1,18 @@
+.showcase{
+    height: 70vh;
+    width: 100vw;
+    background-image: url(/assets/img/geran-de-klerk-357199-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local ;
+    background-size: cover;
+
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .text-container{
+        text-align: right;
+    }
+    z-index: -1;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/main.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>test</h1>
+    <div class="wrapper" id="bodyContainer">
+        <header class="container-fluid header-container">
+            
+            <div class="row">
+                    <div class="logo col-sm-12 col-lg-2 order-lg-1">
+                        <a class="" href="#"></a><img src="/assets/img/images.png" class="logo-image" alt="The Wildlife Protection Trust"></a>
+                    </div>
+                    <div class="info-container d-none d-lg-block col-lg-4 order-lg-5">
+                        <button class="btn donate-btn" >Donate</button>
+                        <button class="btn contact-btn" >Contact</button>
+                        <button class="btn subscribe-btn" >Subscribe</button>
+                    </div>
+                    <div class="social-media col-sm-12 col-lg-8 order-lg-4">
+                        <i class="fab fa-facebook-square icon"></i>
+                        <i class="fab fa-instagram icon"></i>
+                        <i class="fab fa-twitter-square icon"></i>
+                    </div>
+                    <div class="navigation-container col-md-12 col-lg-10 order-lg-2">
+                        <div class="row">
+                            <div class="search-container col-6 col-md-6 d-lg-none">
+                                <form action="">
+                                    <button type="submit"><i class="fas fa-search search-icon"></i></button>
+                                    <input type="text" placeholder="search...">
+                                </form>
+                            </div>
+                            <div class="handler col-6 col-md-6 d-lg-none" id="toggleContainer">
+                                <span>Menu</span>
+                                <div class="nav-toggle" id="navToggle">
+                                    <span class="patty"></span>
+                                    <span class="patty"></span>
+                                    <span class="patty"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <nav class="navigation d-none d-lg-block">
+                            <ul class="navigation-menu " id="navMenu">
+                                <li class="nav-item"><a href="#">What we do</a></li>
+                                <li class="nav-item"><a href="#">Apply to us</a></li>
+                                <li class="nav-item"><a href="#">What we support</a></li>
+                                <li class="nav-item"><a href="#">Grant holders</a></li>
+                                <li class="nav-item testing"><a href="#">Contact us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+            </div>
+        </header>
+
+        <!--Navigation Start-->
+        <!--<nav class="navigation" id="navContainer">
+            <a class="logo" href="#">The Wildlife Protection Trust</a>
+            <div class="menu-container">
+                <ul class="navigation-menu " id="navMenu">
+                    <li class="nav-item"><a href="#">What we do</a></li>
+                    <li class="nav-item"><a href="#">Apply to us</a></li>
+                    <li class="nav-item"><a href="#">What we support</a></li>
+                    <li class="nav-item"><a href="#">Grant holders</a></li>
+                    <li class="nav-item testing"><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+            
+            <div class="toggle-container" id="toggleContainer">
+                <div class="nav-toggle" id="navToggle">
+                    <span class="patty"></span>
+                    <span class="patty"></span>
+                    <span class="patty"></span>
+                </div>
+            </div>
+        </nav>
+        <!--Navigation end-->
+
+        <!--Showcase Start-->
+        <div class="showcase">   
+            <div class="text-container">
+                <br><br>
+                <h1 class="header">Test Header</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus corrupti voluptatum cum. Quae at ullam distinctio
+                    perspiciatis, magnam inventore! Provident?</p>
+                <!-- Insert Button Here!-->
+            </div>
+        </div>
+        <!--Showcase end-->
+    </div>
+
+    <script>
+        let nav = document.getElementById('navMenu');
+        let navigation = document.getElementById('navContainer');
+        let body = document.getElementById('bodyContainer');
+        let hamburger = document.getElementById('toggleItem');
+        let container = document.getElementById('toggleContainer');
+        let trigger = document.getElementById('navToggle'); // or whatever triggers the toggle
+
+        trigger.addEventListener('click', function (e) {
+            e.preventDefault();
+            nav.classList.toggle('active');
+            container.classList.toggle('active');
+            navigation.classList.toggle('active');
+            body.classList.toggle('active');
+            trigger.classList.toggle('active');
+
+        });
+    </script>
+</body>
+
+</html>
