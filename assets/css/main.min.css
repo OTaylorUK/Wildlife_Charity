@@ -58,7 +58,6 @@ html {
   width: 100%;
   padding-right: 0;
   padding-left: 0;
-  margin-right: auto;
   margin-left: auto;
 }
 
@@ -3996,12 +3995,17 @@ html {
   }
 }
 .header-container {
-  background-color: white;
+  background-color: black;
   width: 100vw;
   height: auto;
   z-index: 999999999;
   position: relative;
   text-align: center;
+}
+
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+  letter-spacing: 1px;
 }
 
 .navigation ul {
@@ -4020,6 +4024,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
 }
 
 .handler {
@@ -4037,6 +4042,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
 }
 
 .handler span {
@@ -4074,6 +4080,7 @@ html {
 
 .search-container .search-icon {
   margin: 0 10px 0 20px;
+  color: white;
 }
 
 .search-container button {
@@ -4085,7 +4092,16 @@ html {
   width: 100vw;
 }
 
-.logo-image {
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo .logo-image {
   height: 80px;
 }
 
@@ -4112,7 +4128,7 @@ html {
   position: absolute;
   top: 8px;
   border-radius: 3px;
-  background-color: black;
+  background-color: white;
 }
 
 .nav-toggle span:nth-child(1) {
@@ -4164,31 +4180,53 @@ html {
 }
 
 @media (min-width: 992px) {
+  .header-row {
+    width: 90vw;
+    margin: 0 auto;
+  }
   .navigation {
-    height: 100%;
+    height: 70px;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;
   }
   .navigation .navigation-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
+    width: 70vw;
+    color: white;
+    text-transform: uppercase;
   }
   .navigation .navigation-menu li {
     font-weight: 700;
     -webkit-transition: 0ms;
     transition: 0ms;
+    font-size: 1rem;
+  }
+  .logo {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .logo .logo-image {
+    height: 130px;
   }
   .info-container {
     width: 100%;
@@ -4198,39 +4236,59 @@ html {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .info-container .btn {
     background-color: inherit;
-    padding: 7px !important;
-    margin: 5px 20px;
-    border-radius: 5px;
+    margin: 0 30px;
+    border-radius: 10px;
     color: white;
     font-weight: 800px;
     text-transform: uppercase;
+    height: 35px;
+    width: 100px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 600;
+  }
+  .info-container .btn:hover {
+    background-color: #bd4f06;
   }
   .info-container .donate-btn {
-    background-color: #5b89b4;
+    background-color: #cf5402;
   }
   .info-container .subscribe-btn {
-    background-color: #f5a800;
+    background-color: #cf5402;
+    margin-right: 0;
   }
   .info-container .contact-btn {
-    background-color: #789904;
+    background-color: #cf5402;
   }
   .social-media {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-line-pack: center;
         align-content: center;
   }
   .social-media i {
     margin: auto 5px;
+    font-size: 1.2rem;
+  }
+  .social-media i:first-child {
+    margin-left: 80px;
   }
   .navigation-container {
     display: -webkit-box;

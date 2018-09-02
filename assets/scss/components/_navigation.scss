@@ -1,5 +1,5 @@
 .header-container{
-    background-color: white;
+    background-color: black;
     width: 100vw;
     height: auto;
     z-index: 999999999;
@@ -7,7 +7,12 @@
     text-align: center;
 }
 
-.navigation{
+*{
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 1px;    
+}
+
+.navigation {
     ul{
         list-style: none;
     }
@@ -19,6 +24,7 @@
     display: inline-flex  !important;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 .handler{
@@ -28,6 +34,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    color: white;
     span{
         text-transform: uppercase;
     }
@@ -53,6 +60,7 @@
     }
     .search-icon{
         margin: 0 10px 0 20px;
+        color: white;
 
     }
     button{
@@ -67,11 +75,15 @@
 }
 
 
-
-
-.logo-image{
-    height: 80px;
+.logo{
+    display: flex;
+    justify-content: center;
+    .logo-image{
+        height: 80px;
+    }
 }
+
+
 
 
 
@@ -83,6 +95,7 @@
     height: 35px;
     margin: 0 10px;
     position: relative;
+    
     span{
         width: 60%;
         height: 3px;
@@ -90,7 +103,7 @@
         position: absolute;
         top: 8px;
         border-radius: 3px;
-        background-color: black;
+        background-color: white;
         &:nth-child(1){
             margin-top: 0;
             transition:  0.2s;
@@ -135,54 +148,89 @@
 
 @media (min-width: 992px) {
 
+    .header-row{
+        width: 90vw;
+        margin: 0 auto;
+    }
     .navigation{
-        height: 100%;
+        height: 70px;
         width: 100%;
-        display: flex;
+        display: flex !important;
         align-items: center;
+        justify-content: flex-end;
+        font-family: 'Open Sans Condensed', sans-serif;
+        letter-spacing: 1px;
 
         .navigation-menu{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             height: 100%;
+            width: 70vw;
+            color: white;
+            text-transform: uppercase;
             li{
                 font-weight: 700;
                 transition: 0ms;
+                font-size: 1rem;
             }
+        }
+    }
+
+    .logo{
+        justify-content: flex-start;
+        .logo-image{
+            height: 130px;
         }
     }
     .info-container{
         width: 100%;
         display:flex !important;
         justify-content: flex-end;
-        align-content: center;
+        align-items: center;
+        
         .btn{
             background-color: inherit;
-            padding: 7px !important;
-            margin: 5px 20px;
-            border-radius: 5px;
+            margin: 0 30px;
+            border-radius: 10px;
             color: white;
             font-weight: 800px;
             text-transform: uppercase;
+            height: 35px;
+            width: 100px;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            
+            &:hover{
+                background-color: #bd4f06;
+            }
+            
         }
         .donate-btn{
-            background-color:#5b89b4;
+            background-color:#cf5402;
         }
         .subscribe-btn{
-            background-color:#f5a800; 
+            background-color:#cf5402;
+            margin-right: 0; 
         }
         .contact-btn{
-            background-color:#789904; 
+            background-color:#cf5402; 
         }
     }
 
     .social-media{
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-content: center;
+        
         i{
             margin: auto 5px;
+            font-size: 1.2rem;
+            &:first-child{
+                margin-left: 80px;
+            }
         }
     
     }
