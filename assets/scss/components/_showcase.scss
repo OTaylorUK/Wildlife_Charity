@@ -1,8 +1,10 @@
 .showcase{
     height: 70vh;
     width: 100vw;
-    background-image: url(/assets/img/geran-de-klerk-357199-unsplash.jpg);
-    background-position: center;
+    background-image: url(/assets/img/amar-yashlaha-122277-unsplash.jpg);
+    //background-image: url(/assets/img/joel-herzog-100769-unsplash.jpg);
+    //background-image: url(/assets/img/shripal-daphtary-611696-unsplash.jpg);
+    background-position: 20% 40%;
     background-repeat: no-repeat;
     background-attachment: local ;
     background-size: cover;
@@ -12,7 +14,23 @@
     justify-content: flex-end;
     align-items: center;
     .text-container{
-        text-align: right;
+        text-align: left;
+        color: white;
+        border: 1px red solid;
+        height: 100%;
+        position: relative;
+        .header{
+            position: absolute;
+            top: 50%;
+        }
     }
     z-index: -1;
+}
+
+
+@media (min-width: 992px) {
+    .showcase{
+        height: 80vh;
+        background-position: center 10%;
+    }
 }

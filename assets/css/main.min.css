@@ -4003,6 +4003,10 @@ html {
   text-align: center;
 }
 
+.header-row {
+  padding: 10px 0 !important;
+}
+
 * {
   font-family: 'Open Sans Condensed', sans-serif;
   letter-spacing: 1px;
@@ -4010,6 +4014,46 @@ html {
 
 .navigation ul {
   list-style: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: opacity ease-in-out 300ms;
+  transition: opacity ease-in-out 300ms;
+}
+
+.navigation .navigation-menu {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navigation.active {
+  position: relative;
+}
+
+.navigation.active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: -5vw;
+  width: 100vw;
+  background-color: black;
+  height: 70vh;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .icon {
@@ -4047,6 +4091,7 @@ html {
 
 .handler span {
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .search-container {
@@ -4069,18 +4114,30 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.search-container form input {
-  padding: 5px !important;
-  width: 50%;
+  border: 1px white solid;
   background-color: #f8f8f8;
   border-radius: 5px;
 }
 
+.search-container form input {
+  padding: 5px !important;
+  width: 70%;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.search-container form input:focus, .search-container form input input:focus {
+  outline: none;
+}
+
 .search-container .search-icon {
-  margin: 0 10px 0 20px;
-  color: white;
+  margin: 0 5px;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.search-container .search-btn {
+  border-radius: 5px;
 }
 
 .search-container button {
@@ -4102,7 +4159,7 @@ html {
 }
 
 .logo .logo-image {
-  height: 80px;
+  height: 60px;
 }
 
 .nav-toggle {
@@ -4133,8 +4190,8 @@ html {
 
 .nav-toggle span:nth-child(1) {
   margin-top: 0;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }
 
 .nav-toggle span:nth-child(2) {
@@ -4143,21 +4200,21 @@ html {
 
 .nav-toggle span:nth-child(3) {
   margin-top: 16px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }
 
 .handler.active .nav-toggle span {
-  background-color: black;
+  background-color: white;
   top: 8px;
 }
 
 .handler.active .nav-toggle span:nth-child(1) {
   margin-top: 8px;
-  -webkit-transition: margin-top 0.5s ease-in-out 0.5s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, transform 0.6s ease-in-out 1s, -webkit-transform 0.6s ease-in-out 1s;
+  -webkit-transition: margin-top 0.5s ease-in-out 300ms, -webkit-transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, -webkit-transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, transform 300ms ease-in-out 1s, -webkit-transform 300ms ease-in-out 1s;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
@@ -4165,25 +4222,25 @@ html {
 .handler.active .nav-toggle span:nth-child(2) {
   margin-top: 8px;
   visibility: hidden;
-  -webkit-transition: visibility 0.5s ease-in-out 0.5s;
-  transition: visibility 0.5s ease-in-out 0.5s;
+  -webkit-transition: visibility 0.5s ease-in-out 300ms;
+  transition: visibility 0.5s ease-in-out 300ms;
 }
 
 .handler.active .nav-toggle span:nth-child(3) {
   margin-top: 8px;
-  -webkit-transition: margin-top 0.5s ease-in-out 0.5s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, -webkit-transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, transform 0.6s ease-in-out 1s;
-  transition: margin-top 0.5s ease-in-out 0.5s, transform 0.6s ease-in-out 1s, -webkit-transform 0.6s ease-in-out 1s;
+  -webkit-transition: margin-top 0.5s ease-in-out 300ms, -webkit-transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, -webkit-transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, transform 300ms ease-in-out 1s;
+  transition: margin-top 0.5s ease-in-out 300ms, transform 300ms ease-in-out 1s, -webkit-transform 300ms ease-in-out 1s;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
+.social-media {
+  margin: 10px 0;
+}
+
 @media (min-width: 992px) {
-  .header-row {
-    width: 90vw;
-    margin: 0 auto;
-  }
   .navigation {
     height: 70px;
     width: 100%;
@@ -4210,9 +4267,10 @@ html {
         -ms-flex-align: center;
             align-items: center;
     height: 100%;
-    width: 70vw;
+    width: 90%;
     color: white;
     text-transform: uppercase;
+    opacity: 1;
   }
   .navigation .navigation-menu li {
     font-weight: 700;
@@ -4226,7 +4284,8 @@ html {
             justify-content: flex-start;
   }
   .logo .logo-image {
-    height: 130px;
+    height: 65px;
+    width: 200px;
   }
   .info-container {
     width: 100%;
@@ -4247,7 +4306,7 @@ html {
     color: white;
     font-weight: 800px;
     text-transform: uppercase;
-    height: 35px;
+    height: 40px;
     width: 100px;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -4259,36 +4318,66 @@ html {
         -ms-flex-align: center;
             align-items: center;
     font-weight: 600;
+    font-size: 0.9rem;
   }
   .info-container .btn:hover {
     background-color: #bd4f06;
+    cursor: pointer;
   }
   .info-container .donate-btn {
     background-color: #cf5402;
   }
   .info-container .subscribe-btn {
     background-color: #cf5402;
-    margin-right: 0;
   }
   .info-container .contact-btn {
     background-color: #cf5402;
+  }
+  .search-container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .search-container form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px white solid;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    width: 80%;
+  }
+  .search-container form input {
+    padding: 5px !important;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+  .search-container .search-icon {
+    margin: 0 5px;
+    color: black;
+    font-size: 1.1rem;
   }
   .social-media {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
     -ms-flex-line-pack: center;
         align-content: center;
   }
-  .social-media i {
+  .social-media .icon-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 200px;
+  }
+  .social-media .icon-container i {
     margin: auto 5px;
     font-size: 1.2rem;
-  }
-  .social-media i:first-child {
-    margin-left: 80px;
   }
   .navigation-container {
     display: -webkit-box;
@@ -4453,8 +4542,8 @@ html {
 .showcase {
   height: 70vh;
   width: 100vw;
-  background-image: url(/assets/img/geran-de-klerk-357199-unsplash.jpg);
-  background-position: center;
+  background-image: url(/assets/img/amar-yashlaha-122277-unsplash.jpg);
+  background-position: 20% 40%;
   background-repeat: no-repeat;
   background-attachment: local;
   background-size: cover;
@@ -4472,7 +4561,23 @@ html {
 }
 
 .showcase .text-container {
-  text-align: right;
+  text-align: left;
+  color: white;
+  border: 1px red solid;
+  height: 100%;
+  position: relative;
+}
+
+.showcase .text-container .header {
+  position: absolute;
+  top: 50%;
+}
+
+@media (min-width: 992px) {
+  .showcase {
+    height: 80vh;
+    background-position: center 10%;
+  }
 }
 
 * {
@@ -4484,4 +4589,10 @@ html {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.row {
+  width: 90vw !important;
+  margin: 0 auto !important;
+  max-width: 1500px !important;
 }
