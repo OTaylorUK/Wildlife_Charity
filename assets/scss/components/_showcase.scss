@@ -1,28 +1,72 @@
 .showcase{
     height: 70vh;
     width: 100vw;
-    background-image: url(/assets/img/amar-yashlaha-122277-unsplash.jpg);
-    //background-image: url(/assets/img/joel-herzog-100769-unsplash.jpg);
-    //background-image: url(/assets/img/shripal-daphtary-611696-unsplash.jpg);
-    background-position: 20% 40%;
+    background-image: url(/assets/img/pexels-photo-247431.jpeg);
+    background-position: 20% 80%;
     background-repeat: no-repeat;
     background-attachment: local ;
     background-size: cover;
-
-    top: 0;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     .text-container{
         text-align: left;
         color: white;
-        border: 1px red solid;
-        height: 100%;
-        position: relative;
-        .header{
-            position: absolute;
-            top: 50%;
+        //border: 1px red solid;
+        height: 50%;
+        width: 100%;
+        .showcase-container{
+            //border: 1px blue solid;
+            width: 70%;
+            margin-left: 5%;
+            height: 100%;
         }
+        .showcase-title{
+            margin-bottom: 20px;
+        }
+        .showcase-text{
+            margin-bottom: 20px;
+            width: 80%;
+        }
+        .standard-btn{
+            height: 30px;
+            width: 150px;
+            border-radius: 10px;
+            padding: 5px !important;
+            background-color: #fcfcfc;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.8rem;
+            border: 1px #fcfcfc solid;
+            position: relative;
+            overflow: hidden;
+
+            .fa-arrow-right{
+                width: auto;
+                height: 50%;
+                overflow: hidden;
+                margin: auto;
+                position: absolute;
+                top: 0; bottom: 0; right: -20px;
+                color: white;
+                visibility: hidden;
+            }
+
+            &:hover{
+                box-shadow: -16px 28px 61px -21px rgba(0,0,0,0.7);
+                background-color: rgba($color: #fcfcfc, $alpha: 0.0);
+                transition: background-color 200ms;
+                color: white;
+                cursor: pointer;
+                .fa-arrow-right{
+                    top: 0; bottom: 0; right: 10px;
+                    visibility: visible;
+                    transition: right ease-in-out 550ms;
+                }
+            }
+            
+        }
+
+
     }
     z-index: -1;
 }

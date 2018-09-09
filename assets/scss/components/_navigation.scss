@@ -1,5 +1,5 @@
 .header-container{
-    background-color: black;
+    background-color: rgb(8, 7, 7);
     width: 100vw;
     height: auto;
     z-index: 999999999;
@@ -43,7 +43,7 @@
         top: 10px;
         left: -5vw;
         width: 100vw;
-        background-color: black;
+        background-color: rgb(8, 7, 7);
         height: 70vh;
         align-items: space-around;
         justify-content: space-around;
@@ -73,6 +73,7 @@
     span{
         text-transform: uppercase;
         font-weight: 700;
+        margin-right: 10px;
     }
 }
 
@@ -103,7 +104,7 @@
     }
     .search-icon{
         margin: 0 5px;
-        color: black;
+        color: rgb(8, 7, 7);
         font-size: 1.1rem;
     }
     .search-btn{
@@ -139,7 +140,7 @@
     align-items: center;
     width: 35px;
     height: 35px;
-    margin: 0 10px;
+    //margin: 0 10px;
     position: relative;
     
     span{
@@ -289,7 +290,7 @@
         }
         .search-icon{
             margin: 0 5px;
-            color: black;
+            color: rgb(8, 7, 7);
             font-size: 1.1rem;
         }
     }
