@@ -9,3 +9,8 @@
 @import "modules/typography";
 @import "modules/global";
 
+.row{
+    width: 90vw !important;
+    margin: 0 auto !important;
+    max-width: 1500px !important;
+}
