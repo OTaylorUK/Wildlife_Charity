@@ -1,0 +1,62 @@
+.section-item-square{
+    padding-bottom: 80% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local ;
+    background-size: cover;
+    position: relative;
+    .section-text{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        h1{
+            margin-bottom: 10px;
+        }
+
+    }
+}
+
+.section-item{
+    padding: 10px 0 !important;
+}
+.section-news-one{
+    background-image: url(../img/pexels-photo-624033.jpeg)
+}
+
+.section-news-two{
+    background-image: url(../img/amar.jpg)
+}
+
+.section-news-three{
+    background-image: url(../img/pexels-photo-677974.jpeg)
+}
+
+.section-row{
+    padding: 50px 0px !important;
+}
+
+@media (min-width: 992px) {
+    .section-item-square{
+        padding-bottom: 80% !important;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: local ;
+        background-size: cover;
+        position: relative;
+        .section-text{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            h1{
+                margin-bottom: 10px;
+            }
+    
+        }
+    }
+    
+    .section-item{
+        padding: 0 10px !important;
+    }
+}

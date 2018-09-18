@@ -4578,7 +4578,77 @@ html {
   width: 80%;
 }
 
-.showcase .text-container .standard-btn {
+@media (min-width: 992px) {
+  .showcase {
+    height: 80vh;
+    background-position: center 10%;
+  }
+}
+
+.section-item-square {
+  padding-bottom: 80% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  position: relative;
+}
+
+.section-item-square .section-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.section-item-square .section-text h1 {
+  margin-bottom: 10px;
+}
+
+.section-item {
+  padding: 10px 0 !important;
+}
+
+.section-news-one {
+  background-image: url(../img/pexels-photo-624033.jpeg);
+}
+
+.section-news-two {
+  background-image: url(../img/amar.jpg);
+}
+
+.section-news-three {
+  background-image: url(../img/pexels-photo-677974.jpeg);
+}
+
+.section-row {
+  padding: 50px 0px !important;
+}
+
+@media (min-width: 992px) {
+  .section-item-square {
+    padding-bottom: 80% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    position: relative;
+  }
+  .section-item-square .section-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+  }
+  .section-item-square .section-text h1 {
+    margin-bottom: 10px;
+  }
+  .section-item {
+    padding: 0 10px !important;
+  }
+}
+
+.standard-btn {
   height: 30px;
   width: 150px;
   border-radius: 10px;
@@ -4592,7 +4662,7 @@ html {
   overflow: hidden;
 }
 
-.showcase .text-container .standard-btn .fa-arrow-right {
+.standard-btn .fa-arrow-right {
   width: auto;
   height: 50%;
   overflow: hidden;
@@ -4605,7 +4675,7 @@ html {
   visibility: hidden;
 }
 
-.showcase .text-container .standard-btn:hover {
+.standard-btn:hover {
   -webkit-box-shadow: -16px 28px 61px -21px rgba(0, 0, 0, 0.7);
           box-shadow: -16px 28px 61px -21px rgba(0, 0, 0, 0.7);
   background-color: rgba(252, 252, 252, 0);
@@ -4615,20 +4685,13 @@ html {
   cursor: pointer;
 }
 
-.showcase .text-container .standard-btn:hover .fa-arrow-right {
+.standard-btn:hover .fa-arrow-right {
   top: 0;
   bottom: 0;
   right: 10px;
   visibility: visible;
   -webkit-transition: right ease-in-out 550ms;
   transition: right ease-in-out 550ms;
-}
-
-@media (min-width: 992px) {
-  .showcase {
-    height: 80vh;
-    background-position: center 10%;
-  }
 }
 
 * {
